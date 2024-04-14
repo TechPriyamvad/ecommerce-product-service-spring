@@ -14,12 +14,12 @@ public class FakerService implements ProductService{
     }
 
     @Override
-    public Product getSingleProduct(int productId) {
+    public Product getSingleProduct(Long productId) {
         return null;
     }
 
     @Override
-    public Product createProduct(String title, double price, String description, String image, Category category) {
+    public Product createProduct(String title, double price, String description, String image, String category) {
         return null;
     }
 }

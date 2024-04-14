@@ -1,12 +1,10 @@
 package dev.priyamvad.productservice.controllers;
 
+import dev.priyamvad.productservice.dtos.RequestBodySingleProductDto;
 import dev.priyamvad.productservice.models.Product;
 import dev.priyamvad.productservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 // Handles all http request related to products
 @RestController
@@ -17,10 +15,12 @@ public class ProductController {
         this.productService = productService;
     }
     @PostMapping("/products")
-    public void createProduct(){}
+    public Product createProduct(@RequestBody RequestBodySingleProductDto request){
+        return productService.createProduct(request.getTitle(),request.getPrice(),request.getDescription(), request.getImage(),request.getCategory());
+    }
 
     @GetMapping("/products/{id}")
-    public Product getProductDetails(@PathVariable("id") int id){
+    public Product getProductDetails(@PathVariable("id") Long id){
         return productService.getSingleProduct(id);
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class OwnProductService implements ProductService{
     @Override
-    public Product getSingleProduct(int productId) {
+    public Product getSingleProduct(Long productId) {
         return null;
     }
 
@@ -17,7 +17,7 @@ public class OwnProductService implements ProductService{
     }
 
     @Override
-    public Product createProduct(String title, double price, String description, String image, Category category) {
+    public Product createProduct(String title, double price, String description, String image, String category) {
         return null;
     }
 }
