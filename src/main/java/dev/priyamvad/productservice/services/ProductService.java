@@ -1,6 +1,6 @@
 package dev.priyamvad.productservice.services;
 
-import dev.priyamvad.productservice.models.Category;
+
 import dev.priyamvad.productservice.models.Product;
 
 import java.util.List;

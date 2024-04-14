@@ -2,7 +2,6 @@ package dev.priyamvad.productservice.services;
 
 import dev.priyamvad.productservice.dtos.RequestBodySingleProductDto;
 import dev.priyamvad.productservice.dtos.ResponseBodySingleProductDto;
-import dev.priyamvad.productservice.models.Category;
 import dev.priyamvad.productservice.models.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
