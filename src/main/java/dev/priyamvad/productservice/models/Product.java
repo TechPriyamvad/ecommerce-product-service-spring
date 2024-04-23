@@ -1,5 +1,8 @@
 package dev.priyamvad.productservice.models;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +12,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Product {
+@Entity
+public class Product extends baseModel{
     private Long id;
     private String title;
     private String description;
     private double price;
     private String imageUrl;
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Category category;
 }

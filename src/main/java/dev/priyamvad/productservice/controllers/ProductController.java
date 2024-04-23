@@ -15,7 +15,7 @@ import java.util.List;
 public class ProductController {
     ProductService productService;
     // Qualifier is used to identify the dependency to be injected here
-    public ProductController(@Qualifier("fakestore")ProductService productService){
+    public ProductController(@Qualifier("ownproductservice")ProductService productService){
         this.productService = productService;
     }
     @PostMapping("/products")
