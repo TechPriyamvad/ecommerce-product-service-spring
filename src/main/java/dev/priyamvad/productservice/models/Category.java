@@ -1,5 +1,6 @@
 package dev.priyamvad.productservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -17,5 +18,6 @@ import java.util.List;
 public class Category extends baseModel{
     private String title;
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private List<Product> products;
 }
